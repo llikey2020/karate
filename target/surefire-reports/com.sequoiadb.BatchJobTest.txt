@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------
+Test set: com.sequoiadb.BatchJobTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 12.694 sec <<< FAILURE!
+[2:27] Test Batch Job POST Requests - 'scheduledjobs/create' Endpoint([com/sequoiadb/TestBatchAPI] Testing for Batch Job API)  Time elapsed: 0.277 sec  <<< ERROR!
+com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 112, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+feature call loop failed at index: 1, status code was: 400, expected: 200, response time in milliseconds: 108, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:45
+	at <feature>.: * def result = call read('classpath:com/sequoiadb/featureTemplates/PostTemplate.feature') params (classpath:com/sequoiadb/TestBatchAPI.feature:45:45)
+
+[5:73] Test Batch Job POST Requests - Negative test wrong endpoint([com/sequoiadb/TestBatchAPI] Testing for Batch Job API)  Time elapsed: 0.12 sec  <<< ERROR!
+com.intuit.karate.KarateException: feature call loop failed at index: 0, match failed: CONTAINS
+  $ | data types don't match (NULL:STRING)
+  null
+  'text/plain'
+
+
+classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature:9
+classpath:com/sequoiadb/TestBatchAPI.feature:77
+	at <feature>.: * def result = call read('classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature') params (classpath:com/sequoiadb/TestBatchAPI.feature:77:77)
+
+[6:80] Test Batch Job POST Requests - Negative test scheduled job exists([com/sequoiadb/TestBatchAPI] Testing for Batch Job API)  Time elapsed: 0.124 sec  <<< ERROR!
+com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 103, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:84
+	at <feature>.: * def result = call read('classpath:com/sequoiadb/featureTemplates/PostTemplate.feature') params (classpath:com/sequoiadb/TestBatchAPI.feature:84:84)
+
+[8:99] Test Batch Job GET Requests - scheduledjobs/get/{name} endpoint([com/sequoiadb/TestBatchAPI] Testing for Batch Job API)  Time elapsed: 0.133 sec  <<< ERROR!
+com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 92, url: http://staging.planetrover.ca:32499/batch-job/NaN, response: 
+404 page not found
+
+classpath:com/sequoiadb/featureTemplates/GetTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:106
+	at <feature>.: * def result = call read('classpath:com/sequoiadb/featureTemplates/GetTemplate.feature') params (classpath:com/sequoiadb/TestBatchAPI.feature:106:106)
+
+[12:149] Test Batch Job DELETE Requests - scheduledjobs/delete/{name} endpoint([com/sequoiadb/TestBatchAPI] Testing for Batch Job API)  Time elapsed: 0.247 sec  <<< ERROR!
+com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 106, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/oneruntest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io "oneruntest" not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+feature call loop failed at index: 1, status code was: 404, expected: 200, response time in milliseconds: 107, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/dailytest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io "dailytest" not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:166
+	at <feature>.: * def result = call read('classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature') params (classpath:com/sequoiadb/TestBatchAPI.feature:166:166)
+

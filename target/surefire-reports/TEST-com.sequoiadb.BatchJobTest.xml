@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="12" failures="0" name="com.sequoiadb.BatchJobTest" time="5.355" errors="5" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.11+9-Ubuntu-0ubuntu2.18.04"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/mnt/c/Users/Collin/Documents/batch_job_test"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/mnt/c/Users/Collin/Documents/batch_job_test"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.11+9-Ubuntu-0ubuntu2.18.04"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="5.4.72-microsoft-standard-WSL2"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/collin"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="collin"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="11.0.11"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[1:3] Test Batch Job POST Requests - &apos;jobs/create&apos; Endpoint" time="2.16"/>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[2:27] Test Batch Job POST Requests - &apos;scheduledjobs/create&apos; Endpoint" time="0.277">
+    <error message="feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 112, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+feature call loop failed at index: 1, status code was: 400, expected: 200, response time in milliseconds: 108, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:45" type="com.intuit.karate.KarateException">com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 112, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+feature call loop failed at index: 1, status code was: 400, expected: 200, response time in milliseconds: 108, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:45
+	at &lt;feature&gt;.: * def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/PostTemplate.feature&apos;) params (classpath:com/sequoiadb/TestBatchAPI.feature:45:45)
+</error>
+    <system-out>09:34:41.354 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+09:34:41.357 [main] INFO com.intuit.karate - [print] {
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;oneruntest&quot;
+  },
+  &quot;spec&quot;: {
+    &quot;type&quot;: &quot;Java&quot;,
+    &quot;mainClass&quot;: &quot;org.apache.spark.examples.SparkPi&quot;,
+    &quot;mainApplicationFile&quot;: &quot;s3a://sdbbucket/spark-examples_2.12-3.1.2.jar&quot;,
+    &quot;arguments&quot;: [
+    ],
+    &quot;driver&quot;: {
+      &quot;cores&quot;: 2,
+      &quot;memory&quot;: &quot;2g&quot;
+    },
+    &quot;executor&quot;: {
+      &quot;cores&quot;: 2,
+      &quot;memory&quot;: &quot;2g&quot;,
+      &quot;instances&quot;: 2
+    },
+    &quot;oneRunScheduledJob&quot;: true,
+    &quot;schedule&quot;: {
+      &quot;cronSchedule&quot;: &quot;5 * * * *&quot;,
+      &quot;concurrencyPolicy&quot;: &quot;Allow&quot;,
+      &quot;suspend&quot;: false,
+      &quot;successfulRunHistoryLimit&quot;: 5,
+      &quot;failedRunHistoryLimit&quot;: 5
+    }
+  }
+}
+ 
+09:34:41.362 [main] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:34:41.362 [main] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:34:41.362 [main] DEBUG com.intuit.karate - request:
+1 &gt; POST http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 445
+1 &gt; Host: staging.planetrover.ca:32499
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;metadata&quot;:{&quot;name&quot;:&quot;oneruntest&quot;},&quot;spec&quot;:{&quot;type&quot;:&quot;Java&quot;,&quot;mainClass&quot;:&quot;org.apache.spark.examples.SparkPi&quot;,&quot;mainApplicationFile&quot;:&quot;s3a:\/\/sdbbucket\/spark-examples_2.12-3.1.2.jar&quot;,&quot;arguments&quot;:[],&quot;driver&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;},&quot;executor&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;,&quot;instances&quot;:2},&quot;oneRunScheduledJob&quot;:true,&quot;schedule&quot;:{&quot;cronSchedule&quot;:&quot;5 * * * *&quot;,&quot;concurrencyPolicy&quot;:&quot;Allow&quot;,&quot;suspend&quot;:false,&quot;successfulRunHistoryLimit&quot;:5,&quot;failedRunHistoryLimit&quot;:5}}}
+
+09:34:41.362 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:34:41.363 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 3][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:41.363 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://staging.planetrover.ca:32499
+09:34:41.363 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to staging.planetrover.ca/192.168.6.80:32499
+09:34:41.383 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 172.25.100.191:37968&lt;-&gt;192.168.6.80:32499
+09:34:41.383 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 30000
+09:34:41.383 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request POST /batch-job/scheduledjobs/create HTTP/1.1
+09:34:41.383 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:34:41.383 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:34:41.383 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &gt;&gt; POST /batch-job/scheduledjobs/create HTTP/1.1
+09:34:41.383 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &gt;&gt; Content-Type: application/json; charset=UTF-8
+09:34:41.383 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &gt;&gt; Content-Length: 445
+09:34:41.383 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &gt;&gt; Host: staging.planetrover.ca:32499
+09:34:41.383 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &gt;&gt; Connection: Keep-Alive
+09:34:41.383 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &gt;&gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+09:34:41.383 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &gt;&gt; Accept-Encoding: gzip,deflate
+09:34:41.383 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;POST /batch-job/scheduledjobs/create HTTP/1.1[\r][\n]&quot;
+09:34:41.383 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+09:34:41.383 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Content-Length: 445[\r][\n]&quot;
+09:34:41.383 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Host: staging.planetrover.ca:32499[\r][\n]&quot;
+09:34:41.383 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+09:34:41.383 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)[\r][\n]&quot;
+09:34:41.384 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+09:34:41.384 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;[\r][\n]&quot;
+09:34:41.384 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &gt;&gt; &quot;{&quot;metadata&quot;:{&quot;name&quot;:&quot;oneruntest&quot;},&quot;spec&quot;:{&quot;type&quot;:&quot;Java&quot;,&quot;mainClass&quot;:&quot;org.apache.spark.examples.SparkPi&quot;,&quot;mainApplicationFile&quot;:&quot;s3a:\/\/sdbbucket\/spark-examples_2.12-3.1.2.jar&quot;,&quot;arguments&quot;:[],&quot;driver&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;},&quot;executor&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;,&quot;instances&quot;:2},&quot;oneRunScheduledJob&quot;:true,&quot;schedule&quot;:{&quot;cronSchedule&quot;:&quot;5 * * * *&quot;,&quot;concurrencyPolicy&quot;:&quot;Allow&quot;,&quot;suspend&quot;:false,&quot;successfulRunHistoryLimit&quot;:5,&quot;failedRunHistoryLimit&quot;:5}}}&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;HTTP/1.1 400 Bad Request[\r][\n]&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Server: nginx/1.21.6[\r][\n]&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Date: Thu, 28 Apr 2022 13:34:40 GMT[\r][\n]&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Content-Type: text/plain; charset=utf-8[\r][\n]&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Content-Length: 70[\r][\n]&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;[\r][\n]&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.wire - http-outgoing-3 &lt;&lt; &quot;400 - Invalid request: Invalid cron schedule format: Empty spec string&quot;
+09:34:41.473 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &lt;&lt; HTTP/1.1 400 Bad Request
+09:34:41.473 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &lt;&lt; Server: nginx/1.21.6
+09:34:41.473 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &lt;&lt; Date: Thu, 28 Apr 2022 13:34:40 GMT
+09:34:41.473 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &lt;&lt; Content-Type: text/plain; charset=utf-8
+09:34:41.473 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &lt;&lt; Content-Length: 70
+09:34:41.473 [main] DEBUG karate.org.apache.http.headers - http-outgoing-3 &lt;&lt; Connection: keep-alive
+09:34:41.474 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+09:34:41.474 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 3][route: {}-&gt;http://staging.planetrover.ca:32499] can be kept alive indefinitely
+09:34:41.474 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 0
+09:34:41.474 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 3][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:41.474 [main] DEBUG com.intuit.karate - response time in milliseconds: 112
+1 &lt; 400
+1 &lt; Server: nginx/1.21.6
+1 &lt; Date: Thu, 28 Apr 2022 13:34:40 GMT
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 70
+1 &lt; Connection: keep-alive
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+09:34:41.477 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 112, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+09:34:41.477 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:45
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/PostTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 112, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+09:34:41.487 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+09:34:41.488 [main] INFO com.intuit.karate - [print] {
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;dailytest&quot;
+  },
+  &quot;spec&quot;: {
+    &quot;type&quot;: &quot;Java&quot;,
+    &quot;mainClass&quot;: &quot;org.apache.spark.examples.SparkPi&quot;,
+    &quot;mainApplicationFile&quot;: &quot;s3a://sdbbucket/spark-examples_2.12-3.1.2.jar&quot;,
+    &quot;arguments&quot;: [
+    ],
+    &quot;driver&quot;: {
+      &quot;cores&quot;: 2,
+      &quot;memory&quot;: &quot;2g&quot;
+    },
+    &quot;executor&quot;: {
+      &quot;cores&quot;: 2,
+      &quot;memory&quot;: &quot;2g&quot;,
+      &quot;instances&quot;: 2
+    },
+    &quot;oneRunScheduledJob&quot;: false,
+    &quot;schedule&quot;: {
+      &quot;cronSchedule&quot;: &quot;30 6 * * *&quot;,
+      &quot;concurrencyPolicy&quot;: &quot;Allow&quot;,
+      &quot;suspend&quot;: false,
+      &quot;successfulRunHistoryLimit&quot;: 5,
+      &quot;failedRunHistoryLimit&quot;: 5
+    }
+  }
+}
+ 
+09:34:41.493 [main] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:34:41.493 [main] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:34:41.493 [main] DEBUG com.intuit.karate - request:
+1 &gt; POST http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 446
+1 &gt; Host: staging.planetrover.ca:32499
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;metadata&quot;:{&quot;name&quot;:&quot;dailytest&quot;},&quot;spec&quot;:{&quot;type&quot;:&quot;Java&quot;,&quot;mainClass&quot;:&quot;org.apache.spark.examples.SparkPi&quot;,&quot;mainApplicationFile&quot;:&quot;s3a:\/\/sdbbucket\/spark-examples_2.12-3.1.2.jar&quot;,&quot;arguments&quot;:[],&quot;driver&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;},&quot;executor&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;,&quot;instances&quot;:2},&quot;oneRunScheduledJob&quot;:false,&quot;schedule&quot;:{&quot;cronSchedule&quot;:&quot;30 6 * * *&quot;,&quot;concurrencyPolicy&quot;:&quot;Allow&quot;,&quot;suspend&quot;:false,&quot;successfulRunHistoryLimit&quot;:5,&quot;failedRunHistoryLimit&quot;:5}}}
+
+09:34:41.493 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:34:41.494 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 4][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:41.494 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://staging.planetrover.ca:32499
+09:34:41.494 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to staging.planetrover.ca/192.168.6.80:32499
+09:34:41.510 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 172.25.100.191:37970&lt;-&gt;192.168.6.80:32499
+09:34:41.510 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: set socket timeout to 30000
+09:34:41.510 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request POST /batch-job/scheduledjobs/create HTTP/1.1
+09:34:41.510 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:34:41.510 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:34:41.510 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &gt;&gt; POST /batch-job/scheduledjobs/create HTTP/1.1
+09:34:41.510 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &gt;&gt; Content-Type: application/json; charset=UTF-8
+09:34:41.511 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &gt;&gt; Content-Length: 446
+09:34:41.511 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &gt;&gt; Host: staging.planetrover.ca:32499
+09:34:41.511 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &gt;&gt; Connection: Keep-Alive
+09:34:41.511 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &gt;&gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+09:34:41.511 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &gt;&gt; Accept-Encoding: gzip,deflate
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;POST /batch-job/scheduledjobs/create HTTP/1.1[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Content-Length: 446[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Host: staging.planetrover.ca:32499[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;[\r][\n]&quot;
+09:34:41.511 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &gt;&gt; &quot;{&quot;metadata&quot;:{&quot;name&quot;:&quot;dailytest&quot;},&quot;spec&quot;:{&quot;type&quot;:&quot;Java&quot;,&quot;mainClass&quot;:&quot;org.apache.spark.examples.SparkPi&quot;,&quot;mainApplicationFile&quot;:&quot;s3a:\/\/sdbbucket\/spark-examples_2.12-3.1.2.jar&quot;,&quot;arguments&quot;:[],&quot;driver&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;},&quot;executor&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;,&quot;instances&quot;:2},&quot;oneRunScheduledJob&quot;:false,&quot;schedule&quot;:{&quot;cronSchedule&quot;:&quot;30 6 * * *&quot;,&quot;concurrencyPolicy&quot;:&quot;Allow&quot;,&quot;suspend&quot;:false,&quot;successfulRunHistoryLimit&quot;:5,&quot;failedRunHistoryLimit&quot;:5}}}&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;HTTP/1.1 400 Bad Request[\r][\n]&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Server: nginx/1.21.6[\r][\n]&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Date: Thu, 28 Apr 2022 13:34:40 GMT[\r][\n]&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Content-Type: text/plain; charset=utf-8[\r][\n]&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Content-Length: 70[\r][\n]&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;[\r][\n]&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.wire - http-outgoing-4 &lt;&lt; &quot;400 - Invalid request: Invalid cron schedule format: Empty spec string&quot;
+09:34:41.600 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &lt;&lt; HTTP/1.1 400 Bad Request
+09:34:41.600 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &lt;&lt; Server: nginx/1.21.6
+09:34:41.600 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &lt;&lt; Date: Thu, 28 Apr 2022 13:34:40 GMT
+09:34:41.600 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &lt;&lt; Content-Type: text/plain; charset=utf-8
+09:34:41.600 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &lt;&lt; Content-Length: 70
+09:34:41.600 [main] DEBUG karate.org.apache.http.headers - http-outgoing-4 &lt;&lt; Connection: keep-alive
+09:34:41.600 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+09:34:41.600 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 4][route: {}-&gt;http://staging.planetrover.ca:32499] can be kept alive indefinitely
+09:34:41.600 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: set socket timeout to 0
+09:34:41.600 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 4][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:41.601 [main] DEBUG com.intuit.karate - response time in milliseconds: 108
+1 &lt; 400
+1 &lt; Server: nginx/1.21.6
+1 &lt; Date: Thu, 28 Apr 2022 13:34:40 GMT
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 70
+1 &lt; Connection: keep-alive
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+09:34:41.602 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 108, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+09:34:41.602 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:45
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/PostTemplate.feature&apos;) params
+feature call loop failed at index: 1, status code was: 400, expected: 200, response time in milliseconds: 108, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+09:34:41.603 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:45
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/PostTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 112, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+feature call loop failed at index: 1, status code was: 400, expected: 200, response time in milliseconds: 108, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Invalid request: Invalid cron schedule format: Empty spec string
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:45
+</system-out>
+  </testcase>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[3:49] Test Batch Job POST Requests - Negative test invalid inputs" time="1.286"/>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[4:66] Test Batch Job POST Requests - Negative test payload missing required params" time="0.139"/>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[5:73] Test Batch Job POST Requests - Negative test wrong endpoint" time="0.12">
+    <error message="feature call loop failed at index: 0, match failed: CONTAINS
+  $ | data types don&apos;t match (NULL:STRING)
+  null
+  &apos;text/plain&apos;
+
+
+classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature:9
+classpath:com/sequoiadb/TestBatchAPI.feature:77" type="com.intuit.karate.KarateException">com.intuit.karate.KarateException: feature call loop failed at index: 0, match failed: CONTAINS
+  $ | data types don&apos;t match (NULL:STRING)
+  null
+  &apos;text/plain&apos;
+
+
+classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature:9
+classpath:com/sequoiadb/TestBatchAPI.feature:77
+	at &lt;feature&gt;.: * def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature&apos;) params (classpath:com/sequoiadb/TestBatchAPI.feature:77:77)
+</error>
+    <system-out>09:34:43.069 [main] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:34:43.069 [main] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:34:43.069 [main] DEBUG com.intuit.karate - request:
+1 &gt; GET http://staging.planetrover.ca:32499/batch-job/jobs/create
+1 &gt; Host: staging.planetrover.ca:32499
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:34:43.069 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:34:43.069 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 17][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:43.069 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://staging.planetrover.ca:32499
+09:34:43.070 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to staging.planetrover.ca/192.168.6.80:32499
+09:34:43.085 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 172.25.100.191:37996&lt;-&gt;192.168.6.80:32499
+09:34:43.085 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-17: set socket timeout to 30000
+09:34:43.085 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request GET /batch-job/jobs/create HTTP/1.1
+09:34:43.085 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:34:43.085 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:34:43.085 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &gt;&gt; GET /batch-job/jobs/create HTTP/1.1
+09:34:43.086 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &gt;&gt; Host: staging.planetrover.ca:32499
+09:34:43.086 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &gt;&gt; Connection: Keep-Alive
+09:34:43.086 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &gt;&gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+09:34:43.086 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &gt;&gt; Accept-Encoding: gzip,deflate
+09:34:43.086 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &gt;&gt; &quot;GET /batch-job/jobs/create HTTP/1.1[\r][\n]&quot;
+09:34:43.086 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &gt;&gt; &quot;Host: staging.planetrover.ca:32499[\r][\n]&quot;
+09:34:43.086 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+09:34:43.086 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)[\r][\n]&quot;
+09:34:43.086 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+09:34:43.086 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &gt;&gt; &quot;[\r][\n]&quot;
+09:34:43.164 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &lt;&lt; &quot;HTTP/1.1 405 Method Not Allowed[\r][\n]&quot;
+09:34:43.164 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &lt;&lt; &quot;Server: nginx/1.21.6[\r][\n]&quot;
+09:34:43.164 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &lt;&lt; &quot;Date: Thu, 28 Apr 2022 13:34:41 GMT[\r][\n]&quot;
+09:34:43.164 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &lt;&lt; &quot;Content-Length: 0[\r][\n]&quot;
+09:34:43.164 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+09:34:43.164 [main] DEBUG karate.org.apache.http.wire - http-outgoing-17 &lt;&lt; &quot;[\r][\n]&quot;
+09:34:43.164 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &lt;&lt; HTTP/1.1 405 Method Not Allowed
+09:34:43.164 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &lt;&lt; Server: nginx/1.21.6
+09:34:43.164 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &lt;&lt; Date: Thu, 28 Apr 2022 13:34:41 GMT
+09:34:43.164 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &lt;&lt; Content-Length: 0
+09:34:43.164 [main] DEBUG karate.org.apache.http.headers - http-outgoing-17 &lt;&lt; Connection: keep-alive
+09:34:43.164 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+09:34:43.165 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 17][route: {}-&gt;http://staging.planetrover.ca:32499] can be kept alive indefinitely
+09:34:43.165 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-17: set socket timeout to 0
+09:34:43.165 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 17][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:43.165 [main] DEBUG com.intuit.karate - response time in milliseconds: 96
+1 &lt; 405
+1 &lt; Server: nginx/1.21.6
+1 &lt; Date: Thu, 28 Apr 2022 13:34:41 GMT
+1 &lt; Content-Length: 0
+1 &lt; Connection: keep-alive
+
+09:34:43.168 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature:9
+And match header Content-Type contains &apos;text/plain&apos;
+match failed: CONTAINS
+  $ | data types don&apos;t match (NULL:STRING)
+  null
+  &apos;text/plain&apos;
+
+
+classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature:9
+09:34:43.168 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:77
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature&apos;) params
+feature call loop failed at index: 0, match failed: CONTAINS
+  $ | data types don&apos;t match (NULL:STRING)
+  null
+  &apos;text/plain&apos;
+
+
+classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature:9
+09:34:43.168 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:77
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature&apos;) params
+feature call loop failed at index: 0, match failed: CONTAINS
+  $ | data types don&apos;t match (NULL:STRING)
+  null
+  &apos;text/plain&apos;
+
+
+classpath:com/sequoiadb/featureTemplates/NegGetTemplate.feature:9
+classpath:com/sequoiadb/TestBatchAPI.feature:77
+</system-out>
+  </testcase>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[6:80] Test Batch Job POST Requests - Negative test scheduled job exists" time="0.124">
+    <error message="feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 103, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:84" type="com.intuit.karate.KarateException">com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 103, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:84
+	at &lt;feature&gt;.: * def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/PostTemplate.feature&apos;) params (classpath:com/sequoiadb/TestBatchAPI.feature:84:84)
+</error>
+    <system-out>09:34:43.183 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+09:34:43.184 [main] INFO com.intuit.karate - [print] {
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;oneruntest&quot;
+  },
+  &quot;spec&quot;: {
+    &quot;type&quot;: &quot;Java&quot;,
+    &quot;mainClass&quot;: &quot;org.apache.spark.examples.SparkPi&quot;,
+    &quot;mainApplicationFile&quot;: &quot;s3a://sdbbucket/spark-examples_2.12-3.1.2.jar&quot;,
+    &quot;arguments&quot;: [
+    ],
+    &quot;driver&quot;: {
+      &quot;cores&quot;: 2.0,
+      &quot;memory&quot;: &quot;2g&quot;
+    },
+    &quot;executor&quot;: {
+      &quot;cores&quot;: 2,
+      &quot;memory&quot;: &quot;2g&quot;,
+      &quot;instances&quot;: 2
+    },
+    &quot;oneRunScheduledJob&quot;: true,
+    &quot;schedule&quot;: {
+      &quot;cronSchedule&quot;: &quot;5 * * * *&quot;,
+      &quot;concurrencyPolicy&quot;: &quot;Allow&quot;,
+      &quot;suspend&quot;: false,
+      &quot;successfulRunHistoryLimit&quot;: 5,
+      &quot;failedRunHistoryLimit&quot;: 5
+    }
+  }
+}
+ 
+09:34:43.188 [main] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:34:43.188 [main] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:34:43.188 [main] DEBUG com.intuit.karate - request:
+1 &gt; POST http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 447
+1 &gt; Host: staging.planetrover.ca:32499
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;metadata&quot;:{&quot;name&quot;:&quot;oneruntest&quot;},&quot;spec&quot;:{&quot;type&quot;:&quot;Java&quot;,&quot;mainClass&quot;:&quot;org.apache.spark.examples.SparkPi&quot;,&quot;mainApplicationFile&quot;:&quot;s3a:\/\/sdbbucket\/spark-examples_2.12-3.1.2.jar&quot;,&quot;arguments&quot;:[],&quot;driver&quot;:{&quot;cores&quot;:2.0,&quot;memory&quot;:&quot;2g&quot;},&quot;executor&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;,&quot;instances&quot;:2},&quot;oneRunScheduledJob&quot;:true,&quot;schedule&quot;:{&quot;cronSchedule&quot;:&quot;5 * * * *&quot;,&quot;concurrencyPolicy&quot;:&quot;Allow&quot;,&quot;suspend&quot;:false,&quot;successfulRunHistoryLimit&quot;:5,&quot;failedRunHistoryLimit&quot;:5}}}
+
+09:34:43.188 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:34:43.188 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 18][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:43.188 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://staging.planetrover.ca:32499
+09:34:43.189 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to staging.planetrover.ca/192.168.6.80:32499
+09:34:43.205 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 172.25.100.191:37998&lt;-&gt;192.168.6.80:32499
+09:34:43.205 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-18: set socket timeout to 30000
+09:34:43.205 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request POST /batch-job/scheduledjobs/create HTTP/1.1
+09:34:43.205 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:34:43.205 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:34:43.205 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &gt;&gt; POST /batch-job/scheduledjobs/create HTTP/1.1
+09:34:43.205 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &gt;&gt; Content-Type: application/json; charset=UTF-8
+09:34:43.205 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &gt;&gt; Content-Length: 447
+09:34:43.205 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &gt;&gt; Host: staging.planetrover.ca:32499
+09:34:43.205 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &gt;&gt; Connection: Keep-Alive
+09:34:43.205 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &gt;&gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+09:34:43.205 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &gt;&gt; Accept-Encoding: gzip,deflate
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;POST /batch-job/scheduledjobs/create HTTP/1.1[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;Content-Length: 447[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;Host: staging.planetrover.ca:32499[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;[\r][\n]&quot;
+09:34:43.205 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &gt;&gt; &quot;{&quot;metadata&quot;:{&quot;name&quot;:&quot;oneruntest&quot;},&quot;spec&quot;:{&quot;type&quot;:&quot;Java&quot;,&quot;mainClass&quot;:&quot;org.apache.spark.examples.SparkPi&quot;,&quot;mainApplicationFile&quot;:&quot;s3a:\/\/sdbbucket\/spark-examples_2.12-3.1.2.jar&quot;,&quot;arguments&quot;:[],&quot;driver&quot;:{&quot;cores&quot;:2.0,&quot;memory&quot;:&quot;2g&quot;},&quot;executor&quot;:{&quot;cores&quot;:2,&quot;memory&quot;:&quot;2g&quot;,&quot;instances&quot;:2},&quot;oneRunScheduledJob&quot;:true,&quot;schedule&quot;:{&quot;cronSchedule&quot;:&quot;5 * * * *&quot;,&quot;concurrencyPolicy&quot;:&quot;Allow&quot;,&quot;suspend&quot;:false,&quot;successfulRunHistoryLimit&quot;:5,&quot;failedRunHistoryLimit&quot;:5}}}&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;HTTP/1.1 400 Bad Request[\r][\n]&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;Server: nginx/1.21.6[\r][\n]&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;Date: Thu, 28 Apr 2022 13:34:41 GMT[\r][\n]&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;Content-Type: text/plain; charset=utf-8[\r][\n]&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;Content-Length: 139[\r][\n]&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;[\r][\n]&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.wire - http-outgoing-18 &lt;&lt; &quot;400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32&quot;
+09:34:43.291 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &lt;&lt; HTTP/1.1 400 Bad Request
+09:34:43.291 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &lt;&lt; Server: nginx/1.21.6
+09:34:43.291 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &lt;&lt; Date: Thu, 28 Apr 2022 13:34:41 GMT
+09:34:43.291 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &lt;&lt; Content-Type: text/plain; charset=utf-8
+09:34:43.291 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &lt;&lt; Content-Length: 139
+09:34:43.291 [main] DEBUG karate.org.apache.http.headers - http-outgoing-18 &lt;&lt; Connection: keep-alive
+09:34:43.291 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+09:34:43.291 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 18][route: {}-&gt;http://staging.planetrover.ca:32499] can be kept alive indefinitely
+09:34:43.291 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-18: set socket timeout to 0
+09:34:43.291 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 18][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:43.291 [main] DEBUG com.intuit.karate - response time in milliseconds: 103
+1 &lt; 400
+1 &lt; Server: nginx/1.21.6
+1 &lt; Date: Thu, 28 Apr 2022 13:34:41 GMT
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 139
+1 &lt; Connection: keep-alive
+400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32
+09:34:43.292 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 103, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+09:34:43.293 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:84
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/PostTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 103, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+09:34:43.293 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:84
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/PostTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 400, expected: 200, response time in milliseconds: 103, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/create, response: 
+400 - Cannot decode request body: json: cannot unmarshal number 2.0 into Go struct field batchJobSpecDriver.spec.driver.cores of type int32
+classpath:com/sequoiadb/featureTemplates/PostTemplate.feature:11
+classpath:com/sequoiadb/TestBatchAPI.feature:84
+</system-out>
+  </testcase>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[7:87] Test Batch Job GET Requests - jobs/get/{name} endpoint" time="0.331"/>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[8:99] Test Batch Job GET Requests - scheduledjobs/get/{name} endpoint" time="0.133">
+    <error message="feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 92, url: http://staging.planetrover.ca:32499/batch-job/NaN, response: 
+404 page not found
+
+classpath:com/sequoiadb/featureTemplates/GetTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:106" type="com.intuit.karate.KarateException">com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 92, url: http://staging.planetrover.ca:32499/batch-job/NaN, response: 
+404 page not found
+
+classpath:com/sequoiadb/featureTemplates/GetTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:106
+	at &lt;feature&gt;.: * def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/GetTemplate.feature&apos;) params (classpath:com/sequoiadb/TestBatchAPI.feature:106:106)
+</error>
+    <system-out>09:34:43.673 [main] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:34:43.673 [main] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:34:43.673 [main] DEBUG com.intuit.karate - request:
+1 &gt; GET http://staging.planetrover.ca:32499/batch-job/NaN
+1 &gt; Host: staging.planetrover.ca:32499
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:34:43.673 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:34:43.673 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 22][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:43.673 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://staging.planetrover.ca:32499
+09:34:43.673 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to staging.planetrover.ca/192.168.6.80:32499
+09:34:43.689 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 172.25.100.191:38006&lt;-&gt;192.168.6.80:32499
+09:34:43.689 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-22: set socket timeout to 30000
+09:34:43.689 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request GET /batch-job/NaN HTTP/1.1
+09:34:43.689 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:34:43.689 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:34:43.689 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &gt;&gt; GET /batch-job/NaN HTTP/1.1
+09:34:43.689 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &gt;&gt; Host: staging.planetrover.ca:32499
+09:34:43.689 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &gt;&gt; Connection: Keep-Alive
+09:34:43.689 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &gt;&gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+09:34:43.689 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &gt;&gt; Accept-Encoding: gzip,deflate
+09:34:43.689 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &gt;&gt; &quot;GET /batch-job/NaN HTTP/1.1[\r][\n]&quot;
+09:34:43.689 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &gt;&gt; &quot;Host: staging.planetrover.ca:32499[\r][\n]&quot;
+09:34:43.689 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+09:34:43.689 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)[\r][\n]&quot;
+09:34:43.689 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+09:34:43.689 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &gt;&gt; &quot;[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;HTTP/1.1 404 Not Found[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;Server: nginx/1.21.6[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;Date: Thu, 28 Apr 2022 13:34:42 GMT[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;Content-Type: text/plain; charset=utf-8[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;Content-Length: 19[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;X-Content-Type-Options: nosniff[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;[\r][\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.wire - http-outgoing-22 &lt;&lt; &quot;404 page not found[\n]&quot;
+09:34:43.764 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &lt;&lt; HTTP/1.1 404 Not Found
+09:34:43.764 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &lt;&lt; Server: nginx/1.21.6
+09:34:43.764 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &lt;&lt; Date: Thu, 28 Apr 2022 13:34:42 GMT
+09:34:43.764 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &lt;&lt; Content-Type: text/plain; charset=utf-8
+09:34:43.764 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &lt;&lt; Content-Length: 19
+09:34:43.764 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &lt;&lt; Connection: keep-alive
+09:34:43.764 [main] DEBUG karate.org.apache.http.headers - http-outgoing-22 &lt;&lt; X-Content-Type-Options: nosniff
+09:34:43.764 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+09:34:43.765 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 22][route: {}-&gt;http://staging.planetrover.ca:32499] can be kept alive indefinitely
+09:34:43.765 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-22: set socket timeout to 0
+09:34:43.765 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 22][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:43.765 [main] DEBUG com.intuit.karate - response time in milliseconds: 92
+1 &lt; 404
+1 &lt; Server: nginx/1.21.6
+1 &lt; Date: Thu, 28 Apr 2022 13:34:42 GMT
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 19
+1 &lt; Connection: keep-alive
+1 &lt; X-Content-Type-Options: nosniff
+404 page not found
+
+09:34:43.765 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/featureTemplates/GetTemplate.feature:8
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 92, url: http://staging.planetrover.ca:32499/batch-job/NaN, response: 
+404 page not found
+
+classpath:com/sequoiadb/featureTemplates/GetTemplate.feature:8
+09:34:43.765 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:106
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/GetTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 92, url: http://staging.planetrover.ca:32499/batch-job/NaN, response: 
+404 page not found
+
+classpath:com/sequoiadb/featureTemplates/GetTemplate.feature:8
+09:34:43.765 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:106
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/GetTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 92, url: http://staging.planetrover.ca:32499/batch-job/NaN, response: 
+404 page not found
+
+classpath:com/sequoiadb/featureTemplates/GetTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:106
+</system-out>
+  </testcase>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[9:110] Test Batch Job GET Requests - jobs/list endpoint" time="0.098"/>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[10:117] Test Batch Job GET Requests - scheduledjobs/list endpoint" time="0.132"/>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[11:125] Test Batch Job DELETE Requests - jobs/delete/{name} endpoint" time="0.308"/>
+  <testcase classname="[com/sequoiadb/TestBatchAPI] Testing for Batch Job API" name="[12:149] Test Batch Job DELETE Requests - scheduledjobs/delete/{name} endpoint" time="0.247">
+    <error message="feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 106, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/oneruntest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;oneruntest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+feature call loop failed at index: 1, status code was: 404, expected: 200, response time in milliseconds: 107, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/dailytest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;dailytest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:166" type="com.intuit.karate.KarateException">com.intuit.karate.KarateException: feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 106, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/oneruntest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;oneruntest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+feature call loop failed at index: 1, status code was: 404, expected: 200, response time in milliseconds: 107, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/dailytest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;dailytest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:166
+	at &lt;feature&gt;.: * def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature&apos;) params (classpath:com/sequoiadb/TestBatchAPI.feature:166:166)
+</error>
+    <system-out>09:34:44.336 [main] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:34:44.336 [main] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:34:44.336 [main] DEBUG com.intuit.karate - request:
+1 &gt; DELETE http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/oneruntest
+1 &gt; Host: staging.planetrover.ca:32499
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:34:44.336 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:34:44.337 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 28][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:44.337 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://staging.planetrover.ca:32499
+09:34:44.337 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to staging.planetrover.ca/192.168.6.80:32499
+09:34:44.356 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 172.25.100.191:38018&lt;-&gt;192.168.6.80:32499
+09:34:44.356 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-28: set socket timeout to 30000
+09:34:44.356 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request DELETE /batch-job/scheduledjobs/delete/oneruntest HTTP/1.1
+09:34:44.356 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:34:44.356 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:34:44.357 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &gt;&gt; DELETE /batch-job/scheduledjobs/delete/oneruntest HTTP/1.1
+09:34:44.357 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &gt;&gt; Host: staging.planetrover.ca:32499
+09:34:44.357 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &gt;&gt; Connection: Keep-Alive
+09:34:44.357 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &gt;&gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+09:34:44.357 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &gt;&gt; Accept-Encoding: gzip,deflate
+09:34:44.357 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &gt;&gt; &quot;DELETE /batch-job/scheduledjobs/delete/oneruntest HTTP/1.1[\r][\n]&quot;
+09:34:44.357 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &gt;&gt; &quot;Host: staging.planetrover.ca:32499[\r][\n]&quot;
+09:34:44.357 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+09:34:44.357 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)[\r][\n]&quot;
+09:34:44.357 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+09:34:44.357 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &gt;&gt; &quot;[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;HTTP/1.1 404 Not Found[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;Server: nginx/1.21.6[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;Date: Thu, 28 Apr 2022 13:34:42 GMT[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;Content-Type: text/plain; charset=utf-8[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;Content-Length: 174[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;[\r][\n]&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.wire - http-outgoing-28 &lt;&lt; &quot;404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;oneruntest&quot; not found&quot;
+09:34:44.441 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &lt;&lt; HTTP/1.1 404 Not Found
+09:34:44.441 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &lt;&lt; Server: nginx/1.21.6
+09:34:44.441 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &lt;&lt; Date: Thu, 28 Apr 2022 13:34:42 GMT
+09:34:44.441 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &lt;&lt; Content-Type: text/plain; charset=utf-8
+09:34:44.441 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &lt;&lt; Content-Length: 174
+09:34:44.441 [main] DEBUG karate.org.apache.http.headers - http-outgoing-28 &lt;&lt; Connection: keep-alive
+09:34:44.441 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+09:34:44.441 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 28][route: {}-&gt;http://staging.planetrover.ca:32499] can be kept alive indefinitely
+09:34:44.442 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-28: set socket timeout to 0
+09:34:44.442 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 28][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:44.442 [main] DEBUG com.intuit.karate - response time in milliseconds: 106
+1 &lt; 404
+1 &lt; Server: nginx/1.21.6
+1 &lt; Date: Thu, 28 Apr 2022 13:34:42 GMT
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 174
+1 &lt; Connection: keep-alive
+404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;oneruntest&quot; not found
+09:34:44.443 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 106, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/oneruntest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;oneruntest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+09:34:44.443 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:166
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 106, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/oneruntest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;oneruntest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+09:34:44.451 [main] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+09:34:44.451 [main] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+09:34:44.452 [main] DEBUG com.intuit.karate - request:
+1 &gt; DELETE http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/dailytest
+1 &gt; Host: staging.planetrover.ca:32499
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:34:44.452 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+09:34:44.452 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 29][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:44.452 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://staging.planetrover.ca:32499
+09:34:44.452 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to staging.planetrover.ca/192.168.6.80:32499
+09:34:44.480 [main] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 172.25.100.191:38020&lt;-&gt;192.168.6.80:32499
+09:34:44.480 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-29: set socket timeout to 30000
+09:34:44.480 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request DELETE /batch-job/scheduledjobs/delete/dailytest HTTP/1.1
+09:34:44.480 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+09:34:44.480 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+09:34:44.480 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &gt;&gt; DELETE /batch-job/scheduledjobs/delete/dailytest HTTP/1.1
+09:34:44.480 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &gt;&gt; Host: staging.planetrover.ca:32499
+09:34:44.480 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &gt;&gt; Connection: Keep-Alive
+09:34:44.480 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &gt;&gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)
+09:34:44.480 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &gt;&gt; Accept-Encoding: gzip,deflate
+09:34:44.480 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &gt;&gt; &quot;DELETE /batch-job/scheduledjobs/delete/dailytest HTTP/1.1[\r][\n]&quot;
+09:34:44.480 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &gt;&gt; &quot;Host: staging.planetrover.ca:32499[\r][\n]&quot;
+09:34:44.480 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+09:34:44.480 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.11)[\r][\n]&quot;
+09:34:44.480 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+09:34:44.480 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &gt;&gt; &quot;[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;HTTP/1.1 404 Not Found[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;Server: nginx/1.21.6[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;Date: Thu, 28 Apr 2022 13:34:43 GMT[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;Content-Type: text/plain; charset=utf-8[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;Content-Length: 172[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;[\r][\n]&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.wire - http-outgoing-29 &lt;&lt; &quot;404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;dailytest&quot; not found&quot;
+09:34:44.558 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &lt;&lt; HTTP/1.1 404 Not Found
+09:34:44.558 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &lt;&lt; Server: nginx/1.21.6
+09:34:44.558 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &lt;&lt; Date: Thu, 28 Apr 2022 13:34:43 GMT
+09:34:44.558 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &lt;&lt; Content-Type: text/plain; charset=utf-8
+09:34:44.558 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &lt;&lt; Content-Length: 172
+09:34:44.558 [main] DEBUG karate.org.apache.http.headers - http-outgoing-29 &lt;&lt; Connection: keep-alive
+09:34:44.558 [main] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+09:34:44.559 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 29][route: {}-&gt;http://staging.planetrover.ca:32499] can be kept alive indefinitely
+09:34:44.559 [main] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-29: set socket timeout to 0
+09:34:44.559 [main] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 29][route: {}-&gt;http://staging.planetrover.ca:32499][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+09:34:44.559 [main] DEBUG com.intuit.karate - response time in milliseconds: 107
+1 &lt; 404
+1 &lt; Server: nginx/1.21.6
+1 &lt; Date: Thu, 28 Apr 2022 13:34:43 GMT
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 172
+1 &lt; Connection: keep-alive
+404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;dailytest&quot; not found
+09:34:44.559 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 107, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/dailytest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;dailytest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+09:34:44.559 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:166
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature&apos;) params
+feature call loop failed at index: 1, status code was: 404, expected: 200, response time in milliseconds: 107, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/dailytest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;dailytest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+09:34:44.560 [main] ERROR com.intuit.karate - classpath:com/sequoiadb/TestBatchAPI.feature:166
+* def result = call read(&apos;classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature&apos;) params
+feature call loop failed at index: 0, status code was: 404, expected: 200, response time in milliseconds: 106, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/oneruntest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name oneruntest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;oneruntest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+feature call loop failed at index: 1, status code was: 404, expected: 200, response time in milliseconds: 107, url: http://staging.planetrover.ca:32499/batch-job/scheduledjobs/delete/dailytest, response: 
+404 - Error deleting scheduled job: ScheduledSparkApplication with name dailytest does not exist. err: scheduledsparkapplications.sparkoperator.k8s.io &quot;dailytest&quot; not found
+classpath:com/sequoiadb/featureTemplates/DeleteTemplate.feature:8
+classpath:com/sequoiadb/TestBatchAPI.feature:166
+</system-out>
+  </testcase>
+</testsuite>

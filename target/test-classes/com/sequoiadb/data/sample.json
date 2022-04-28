@@ -1,0 +1,21 @@
+{
+    "metadata": {
+        "name": "job"
+    },
+    "spec": {
+        "type": "Scala",
+        "mainClass": "org.apache.spark.examples.SparkPi",
+        "mainApplicationFile": "s3a://sdbbucket/spark-examples_2.12-3.1.2.jar",
+        "arguments": [],
+        "driver": {
+            "cores": 1,
+            "memory": "2g"
+        },
+        "executor": {
+            "cores": 2,
+            "memory": "2g",
+            "instances": 2
+        },
+        "oneRunScheduledJob": true
+    }
+}

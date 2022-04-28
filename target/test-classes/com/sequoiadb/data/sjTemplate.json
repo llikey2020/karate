@@ -1,0 +1,28 @@
+{
+    "metadata": {
+        "name": "#(name)"
+    },
+    "spec": {
+        "type": "#(type)",
+        "mainClass": "org.apache.spark.examples.SparkPi",
+        "mainApplicationFile": "s3a://sdbbucket/spark-examples_2.12-3.1.2.jar",
+        "arguments": [],
+        "driver": {
+            "cores": "#(dCores)",
+            "memory": "#(dMemory)"
+        },
+        "executor": {
+            "cores": "#(eCores)",
+            "memory": "#(eMemory)",
+            "instances": "#(instances)"
+        },
+        "oneRunScheduledJob": "#(isOneRun)",
+        "schedule": {
+            "cronSchedule": "#(cron)",
+            "concurrencyPolicy":"#(concPolicy)",
+            "suspend": "#(isSuspend)",
+            "successfulRunHistoryLimit": "#(successLimit)",
+            "failedRunHistoryLimit": "#(failedLimit)"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "karateRunner.karateRunner.default": "TestRunner",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "maven.view": "hierarchical"
+}
